@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Table</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <table mat-table [dataSource]="data">
+      <!-- Column Definitions -->
+      <ng-container matColumnDef="column_name">
+        <th mat-header-cell *matHeaderCellDef>League</th>
+        <th mat-header-cell *matHeaderCellDef>Column Name</th>
+        <th mat-header-cell *matHeaderCellDef>Column Name</th>
+        <th mat-header-cell *matHeaderCellDef>Column Name</th>
+        <th mat-header-cell *matHeaderCellDef>Column Name</th>
+      </ng-container>
+
+      <!-- Header and Rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns">
+        <td mat-cell>Test League</td>
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </body>
+</html>
